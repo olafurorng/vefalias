@@ -1,0 +1,126 @@
+  .App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #5dbb95;
+  padding: 20px 0 10px 0;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.8em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.number-of-finished {
+  color: #5dbb95;
+  font-size: 1.6em;
+  margin-top: 20px;
+}
+
+.number-of-skipped {
+  color: #ec6368;
+  font-size: 1.2em;
+}
+
+.action-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  font-size: 1.2em;
+  font-weight: 200;
+  letter-spacing: 2px;
+  padding: 15px 0 15px 0;
+  width: 220px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.positive-btn {
+  border: 1px solid #5dbb95;
+  color: #5dbb95;
+}
+
+.positive-btn:hover {
+  background: #5dbb95;
+  color: white;
+}
+
+.negative-btn {
+  border: 1px solid #ec6368;
+  color: #ec6368;
+}
+
+.negative-btn:hover {
+  background: #ec6368;
+  color: white;
+}
+
+.neutral-btn {
+  border: 1px solid #d4b917;
+  color: #d4b917;
+}
+
+.neutral:hover {
+  background: #d4b917;
+  color: white;
+}
+
+.button-margin-top {
+  margin-top: 30px;
+}
+
+.word {
+  font-size: 2em;
+  letter-spacing: 1.3px;
+  color: #777;
+}
+
+.word-header {
+  font-style: italic;
+  font-size: 0.7em;
+  color: #888;
+}
+
+
+@media only screen and (max-width: 350px) {
+  .App-logo {
+    height: 60px;
+  }
+
+  .App-header {
+    padding: 14px 0 5px 0;
+  }
+
+  .App-title {
+    font-size: 1.5em;
+  }
+
+  .button-margin-top {
+    margin-top: 22px;
+  }
+
+  .action-container {
+    margin-top: 15px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

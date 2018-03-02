@@ -1,2 +1,8 @@
 # vefalias
-Íslensk vefútgáfa af Alias 
+Íslensk vefútgáfa af Alias á vef formati, sem hægt er að opna hér: ...
+
+## Hvaðan koma orðin
+Orðin eru aðallega fengin frá https://is.wiktionary.org/w/index.php?title=Flokkur:Nafnor%C3%B0_me%C3%B0_sterkum_beygingum
+
+## Hvað vantar í þessa vefútgáfu
+Í þessari vefútgáfu af Alias er ekki leikborðið sjálft
