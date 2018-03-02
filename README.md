@@ -6,3 +6,7 @@ Orðin eru aðallega fengin frá https://is.wiktionary.org/w/index.php?title=Flo
 
 ## Hvað vantar í þessa vefútgáfu
 Í þessari vefútgáfu af Alias er ekki leikborðið sjálft og ekki tími
+
+## Hvernig á að gefa nýja útgáfu út:
+Keyra `npm run deploy`
+Sjá leiðbeiningar: https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#github-pages
