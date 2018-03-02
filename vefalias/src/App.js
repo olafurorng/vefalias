@@ -12,6 +12,7 @@ class App extends Component {
       word: null,
       finishedWords: [],
       skippedWords: [],
+      gameFinished: false,
     };
 
     // binding methods
@@ -20,12 +21,23 @@ class App extends Component {
     this.nextWord = this.nextWord.bind(this);
     this.skipWord = this.skipWord.bind(this);
     this.stopGame = this.stopGame.bind(this);
+    this.readyToStart = this.readyToStart.bind(this);
 
     this.getNextWord();
   }
 
   startGame() {
     this.setState({word: this.getNextWord()})
+    this.setState({finishedWords: []})
+    this.setState({skippedWords: []})
+    this.setState({gameFinished: false})
+  }
+
+  readyToStart() {
+    this.setState({word: null})
+    this.setState({finishedWords: []})
+    this.setState({skippedWords: []})
+    this.setState({gameFinished: false})
   }
 
   nextWord() {
@@ -39,9 +51,7 @@ class App extends Component {
   }
 
   stopGame() {
-    this.setState({word: null})
-    this.setState({finishedWords: []})
-    this.setState({skippedWords: []})
+    this.setState({gameFinished: true})
   }
 
   getNextWord() {
@@ -50,8 +60,9 @@ class App extends Component {
   }
 
   render() {
-    const word = this.state.word ? this.state.word : "Smelltu á byrja";
-    const gameIsRunning = this.state.word !== null;
+    const word = this.state.word;
+    const gameIsRunning = this.state.word !== null && !this.state.gameFinished;
+    const gameFinished = this.state.gameFinished;
 
     return (
       <div className="App">
@@ -65,16 +76,36 @@ class App extends Component {
         </div>
         <div className="action-container">
           {gameIsRunning ?
-            <div>
+            <div className="game-container">
               <div className="word-header">orð:</div>
               <div className="word">{this.state.word}</div>
               <div className="button positive-btn button-margin-top" onClick={this.nextWord}>Næsta</div>
               <div className="button negative-btn button-margin-top" onClick={this.skipWord}>Sleppa</div>
               <div className="button neutral-btn button-margin-top" onClick={this.stopGame}>Stoppa</div>
             </div>
-          : <div>
+          : !gameIsRunning && !gameFinished ?
+            <div>
               <button className="button positive-btn" onClick={this.startGame}>Byrja</button>
             </div>
+          : null
+          }
+          {gameFinished ?
+            <div className="game-container">
+
+              <div className="word-header">Kláruð orð</div>
+              {this.state.finishedWords.map(function(word){
+                   return <div className="word-final" key={ word }>{word}</div>;
+                 })}
+
+              <br />
+
+              <div className="word-header">Ókláruð orð</div>
+              {this.state.skippedWords.map(function(word){
+                   return <div className="word-final" key={ word }>{word}</div>;
+                 })}
+
+              <button className="button positive-btn button-margin-top" onClick={this.readyToStart}>Byrja aftur</button>
+            </div> : null
           }
         </div>
 

@@ -34,6 +34,13 @@
 
 .action-container {
   margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,9 +99,17 @@
 }
 
 .word-header {
+  text-decoration: underline;
   font-style: italic;
   font-size: 0.7em;
   color: #888;
+}
+
+.word-final {
+  font-weight: 200;
+  font-size: 1.4em;
+  margin-bottom: 6px;
+  color: #666;
 }
 
 
