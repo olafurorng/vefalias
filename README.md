@@ -1,5 +1,5 @@
 # vefalias
-Íslensk vefútgáfa af Alias á vef formati, sem hægt er að opna hér: ...
+Íslensk vefútgáfa af Alias á vef formati, sem hægt er að opna hér: https://olafurorng.github.io/vefalias/
 
 ## Hvaðan koma orðin
 Orðin eru aðallega fengin frá https://is.wiktionary.org/w/index.php?title=Flokkur:Nafnor%C3%B0_me%C3%B0_sterkum_beygingum
